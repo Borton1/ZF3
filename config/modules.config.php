@@ -14,4 +14,5 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'Application',
+       // <-- Add this line
 ];
