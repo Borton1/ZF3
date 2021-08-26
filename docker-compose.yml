@@ -1,7 +1,29 @@
-zf:
-  build: .
-  dockerfile: Dockerfile
-  ports:
-   - "8080:80"
-  volumes:
-   - .:/var/www
+version: '3'
+services:
+  zf:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - "8080:80"
+    volumes:
+     - .:/var/www
+    networks:
+     - default
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "33061:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: zf2tutorial
+    networks:
+      - default
+    volumes:
+      - data:/var/lib/mysql:rw
+networks:
+  default:
+volumes:
+  data:

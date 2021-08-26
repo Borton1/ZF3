@@ -11,5 +11,15 @@
  * file.
  */
 
-return [
-];
+return array(
+    'db' => array(
+        'driver'         => 'Pdo',
+        'dsn'            => 'mysql:host=mysql;dbname=zf2tutorial;',
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'ZendDbAdapterAdapter'
+                    => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
+);

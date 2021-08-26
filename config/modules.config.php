@@ -11,8 +11,12 @@
  * This should be an array of module namespaces used in the application.
  */
 return [
+    'Zend\I18n',
+    'Zend\Form',
+    'Zend\Db',
     'Zend\Router',
     'Zend\Validator',
     'Application',
+    'Album',
        // <-- Add this line
 ];

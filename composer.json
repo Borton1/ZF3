@@ -11,15 +11,24 @@
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": "^5.6 || ^7.0",
-        "zendframework/zend-component-installer": "^1.0 || ^2.1",
+        "zendframework/zend-component-installer": "^1.1",
         "zendframework/zend-mvc": "^3.1.1",
         "zfcampus/zf-development-mode": "^3.2",
-        "zendframework/zend-form": "^2.14"
+        "zendframework/zend-form": "^2.14",
+        "zendframework/zend-db": "^2.11",
+        "zendframework/zend-i18n": "^2.6",
+        "zendframework/zend-view": "^2.6.2",
+        "doctrine/dbal": "^2.5"
     },
     "autoload": {
         "psr-4": {
-            "Application\\": "module/Application/src/"
+            "Application\\": "module/Application/src/",
+            "Album\\": "module/Album/src/"
         }
+    },
+    "suggest": {
+        "zendframework/zend-i18n": "^2.6",
+        "zendframework/zend-view": "^2.6.2"
     },
     "autoload-dev": {
         "psr-4": {
