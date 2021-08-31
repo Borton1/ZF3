@@ -25,7 +25,7 @@ return [
     'Application',
     'Album',
     'MyBlog',
-//     'MyUser',
+     'MyUser',
 
        // <-- Add this line
 ];
