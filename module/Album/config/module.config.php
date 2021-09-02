@@ -1,8 +1,9 @@
 <?php
 namespace Album;
-use Zend\Router\Http\Literal;
+
+use Zend\Mvc\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
-use Zend\Router\Http\Segment;
+use Zend\Mvc\Router\Http\Segment;
 use Album\Controller\AlbumController;
 return [
 

@@ -1,20 +1,26 @@
 <?php
 namespace MyBlog\Controller\Factory;
 
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
 use Interop\Container\ContainerInterface;
 use MyBlog\Controller\BlogController;
-class BlogControllerFactory implements FactoryInterface {
-    public function __invoke(ContainerInterface $container , $requestedName , array $options = null){
-        if ($container instanceof ServiceLocatorAwareInterface) {
-                    $container = $container->getServiceLocator();
-                }
+use Zend\ServiceManager\ServiceLocatorInterface;
 
-        return new BlogController($container->get('Doctrine\ORM\EntityManager'));
-    }
-//     public function createService()
-//     {
+class BlogControllerFactory implements FactoryInterface {
+//    public function __invoke(ContainerInterface $container , $requestedName , array $options = null){
+//        if ($container instanceof ServiceLocatorAwareInterface) {
+//                    $container = $container->getServiceLocator();
+//                }
 //
-//     }
+//        return new BlogController($container->get('Doctrine\ORM\EntityManager'));
+//    }
+     public function createService(ServiceLocatorInterface $serviceLocator)
+     {
+         if ($serviceLocator instanceof ServiceLocatorAwareInterface) {
+             $serviceLocator = $serviceLocator->getServiceLocator();
+         }
+
+         return new BlogController($serviceLocator->get('Doctrine\ORM\EntityManager'));
+     }
 }

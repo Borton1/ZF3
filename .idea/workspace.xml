@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PhpIncludePathManager">
+  <component name="ChangeListManager">
+    <list default="true" id="34e8c865-e7e6-43c6-98f9-4692a0e96360" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/config/autoload/z.global.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/autoload/zfcuser.global.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/autoload/zend-developer-tools.local-development.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/modules.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/modules.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Album/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Album/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/MyBlog/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/MyBlog/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/MyBlog/src/Controller/Factory/BlogControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/MyBlog/src/Controller/Factory/BlogControllerFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/MyUser/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/MyUser/src/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/MyUser/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/MyUser/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/MyUser/src/MyUser/Entity/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/MyUser/src/Entity/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/MyUser/src/MyUser/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/MyUser/src/Entity/User.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="DockerExecCommands">
+    <ExecCommand>
+      <option name="command" value="bush" />
+    </ExecCommand>
+    <ExecCommand>
+      <option name="command" value="bash" />
+    </ExecCommand>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-xmlrpc" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-feed" />
@@ -114,7 +162,43 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-mime" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0">
-    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  <component name="ProjectId" id="1xZZkF06gPydFYDr1wwgoHilcPz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34e8c865-e7e6-43c6-98f9-4692a0e96360" name="Changes" comment="" />
+      <created>1630564717291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630564717291</updated>
+      <workItem from="1630564731702" duration="6993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
