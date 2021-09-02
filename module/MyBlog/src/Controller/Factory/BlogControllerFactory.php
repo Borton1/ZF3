@@ -17,9 +17,12 @@ class BlogControllerFactory implements FactoryInterface {
 //    }
      public function createService(ServiceLocatorInterface $serviceLocator)
      {
-         if ($serviceLocator instanceof ServiceLocatorAwareInterface) {
-             $serviceLocator = $serviceLocator->getServiceLocator();
-         }
+         print_r(get_class($serviceLocator->get('Doctrine\ORM\EntityManager')));
+         die();
+
+//         if ($serviceLocator instanceof ServiceLocatorAwareInterface) {
+//             $serviceLocator = $serviceLocator->getServiceLocator();
+//         }
 
          return new BlogController($serviceLocator->get('Doctrine\ORM\EntityManager'));
      }

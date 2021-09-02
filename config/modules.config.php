@@ -30,6 +30,7 @@ return [
     'Application',
     'Album',
     'MyBlog',
-//    'MyUser',
+    'MyUser',
+    'ZfcTwig',
        // <-- Add this line
 ];

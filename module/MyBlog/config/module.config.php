@@ -15,12 +15,12 @@ return array(
     ),
 
     'controllers' => array(
-        'factories' => array(
-                    'MyBlog\Controller\BlogController' => 'MyBlog\Controller\Factory\BlogControllerFactory',
-                ),
-//         'invokables' => array(
-//             'MyBlog\Controller\BlogPost' => 'MyBlog\Controller\BlogController',
-//         ),
+//        'factories' => array(
+//                    'MyBlog\Controller\BlogController' => 'MyBlog\Controller\Factory\BlogControllerFactory',
+//                ),
+         'invokables' => array(
+             'MyBlog\Controller\BlogController' => 'MyBlog\Controller\BlogController',
+         ),
     ),
 
     'view_helpers' => array(
@@ -60,6 +60,9 @@ return array(
     'view_manager' => array(
         'template_path_stack' => array(
            __DIR__ . '/../View',
+        ),
+        'strategies' => array(
+            'ZfcTwigViewStrategy',
         ),
     ),
 

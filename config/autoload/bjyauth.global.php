@@ -5,8 +5,8 @@ return array(
 
         'default_role' => 'guest',
 
-        'identity_provider' => 'BjyAuthorize\Provider\Identity\AuthenticationIdentityProvider',
-
+//        'identity_provider' => 'BjyAuthorize\Provider\Identity\AuthenticationIdentityProvider',
+        'identity_provider' => \BjyAuthorize\Provider\Identity\ZfcUserZendDb::class,
         'authenticated_role' => 'user',
 
         'role_providers'        => array(
@@ -39,18 +39,18 @@ return array(
                     'roles' => array('user'),
                 ),
 
-                array('controller' => 'Application\Controller\Index', 'roles' => array()),
-
+                array('controller' => 'Application\Controller\IndexController', 'roles' => array('guest', 'user')),
+                array('controller' => 'Album\Controller\AlbumController', 'roles' => array('guest', 'user')),
                 array(
-                    'controller' => 'MyBlog\Controller\BlogPost',
+                    'controller' => 'MyBlog\Controller\BlogController',
                     'action' => array('index', 'view'),
-                    'roles' => array('guest', 'user'),
+                    'roles' =>  array('guest', 'user'),
                 ),
 
                 array(
-                    'controller' => 'MyBlog\Controller\BlogPost',
+                    'controller' => 'MyBlog\Controller\BlogController',
                     'action' => array('add', 'edit', 'delete'),
-                    'roles' => array('administrator'),
+                    'roles' => array('administrator','guest', 'user'),
                 ),
             ),
         ),

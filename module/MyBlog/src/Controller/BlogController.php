@@ -1,4 +1,5 @@
 <?php
+
 namespace MyBlog\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
@@ -7,19 +8,25 @@ use MyBlog\Entity;
 
 class BlogController extends AbstractActionController
 {
-    private $entityManager; //Doctrineobject
-    public function __construct($entityManager)
-    {
-       $this->entityManager = $entityManager;
-    }
+//    private $entityManager; //Doctrineobject
+//    public function __construct($entityManager)
+//    {
+//       $this->entityManager = $entityManager;
+//    }
     public function indexAction()
     {
-        $objectManager = $this->entityManager;
-
-        $posts = $objectManager
-            ->getRepository('\MyBlog\Entity\BlogPost')
-            ->findBy(array('state' => 1), array('created' => 'DESC'));
-
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+//        $objectManager = $this->entityManager;
+        if ($this->isAllowed('controller/MyBlog\Controller\BlogController:edit')) {
+            $posts = $objectManager
+                ->getRepository('\MyBlog\Entity\BlogPost')
+                ->findBy(array(), array('created' => 'DESC'));
+        }
+        else {
+            $posts = $objectManager
+                ->getRepository('\MyBlog\Entity\BlogPost')
+                ->findBy(array('state' => 1), array('created' => 'DESC'));
+        }
         $posts_array = array();
         foreach ($posts as $post) {
             $posts_array[] = $post->getArrayCopy();
@@ -70,8 +77,9 @@ class BlogController extends AbstractActionController
             $form->setData($request->getPost());
 
             if ($form->isValid()) {
-                $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
 
+                $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+    
                 $blogpost = new \MyBlog\Entity\BlogPost();
 
                 $blogpost->exchangeArray($form->getData());
