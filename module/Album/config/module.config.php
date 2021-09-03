@@ -7,7 +7,6 @@ use Zend\Mvc\Router\Http\Segment;
 use Album\Controller\AlbumController;
 return [
 
-
     'router' => [
         'routes' => [
             'album' => [
@@ -26,16 +25,14 @@ return [
             ],
         ],
     ],
-    'home' => [
-        'type' => \Zend\Router\Http\Literal::class,
-        'options' => [
-            'route'    => '/',
-            'defaults' => [
-                'controller' => AlbumController::class, // <-- change here
-                'action'     => 'index',
-            ],
-        ],
-    ],
+    'controllers' => array(
+        'factories' => array(
+                    'Album\Controller\AlbumController' => 'Album\Controller\Factory\AlbumControllerFactory',
+                ),
+////        'invokables' => array(
+////            'MyBlog\Controller\BlogController' => 'MyBlog\Controller\BlogController',
+////        ),
+    ),
     'view_manager' => [
         'template_path_stack' => [
             'album' => __DIR__ . '/../view',

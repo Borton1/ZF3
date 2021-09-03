@@ -6,8 +6,10 @@ use Zend\View\Model\ViewModel;
 use Album\Model\AlbumTable;
 use Album\Form\AlbumForm;
 use Album\Model\Album;
+
 class AlbumController extends AbstractActionController
 {
+
     private $table;
     // Add this constructor:
     public function __construct(AlbumTable $table)
