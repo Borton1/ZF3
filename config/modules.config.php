@@ -27,6 +27,7 @@ return [
     'ZfcBase',
     'ZfcUser',
     'BjyAuthorize',
+        'AsseticBundle',
     'Application',
     'Album',
     'MyBlog',

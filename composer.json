@@ -12,6 +12,7 @@
     "require": {
         "php": ">=5.4",
         "zendframework/zendframework": ">2.2.0rc1",
+        "widmogrod/zf2-assetic-module": "^1.6",
         "doctrine/common": ">=2.1",
         "doctrine/doctrine-orm-module": "~1",
         "zf-commons/zfc-base": "v0.1.2",
