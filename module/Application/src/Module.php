@@ -13,9 +13,6 @@ class Module
 
     public function getConfig()
     {
-        return array_merge(
-            include __DIR__ . '/../config/module.config.php',
-            include __DIR__ . '/../config/assets.config.php'
-        );
+        return include __DIR__ . '/../config/module.config.php';
     }
 }

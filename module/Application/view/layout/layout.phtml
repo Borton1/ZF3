@@ -11,20 +11,19 @@
 
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/style.css'))
-//            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
-            ->prependStylesheet($this->basePath('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'))
+            ->prependStylesheet('css/style.css')
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+//            ->prependStylesheet($this->basePath('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'))
         ?>
 
         <!-- Scripts -->
         <?= $this->inlineScript()
 //            ->prependFile($this->basePath('js/bootstrap.min.js'))
-//            ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
-            ->prependFile($this->basePath('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'))
-            ->prependFile($this->basePath('https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js'))
-            ->prependFile($this->basePath('https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js'))
-            ->prependFile($this->basePath('https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.js'))
-            ->prependFile($this->basePath('js/main.js'))
+            ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
+//            ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js')
+            ->appendFile('https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js')
+            ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.js')
 
         ?>
     </head>
